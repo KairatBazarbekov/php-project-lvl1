@@ -1,18 +1,19 @@
 {
     "name": "hexlet/code",
-    "autoload": {
-        "psr-4": {
-            "Hexlet\\Code\\": "src/"
-        }
-    },
+    "bin": ["bin/brain-games"],
+    "type": "library",
     "authors": [
         {
             "name": "Kairat Bazarbekov",
             "email": "bazarbekovkairat@gmail.com"
         }
     ],
-    "require": {},
-    "bin": [
-        "bin/brain-games"
-    ]
+    "description": "hexlet code",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "require": {}
 }
