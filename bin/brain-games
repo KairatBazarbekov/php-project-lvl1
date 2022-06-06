@@ -11,4 +11,6 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-Cli\welcome();
+$engine =new \Hexlet\Code\Engine();
+$engine->welcome();
+$engine->setName();

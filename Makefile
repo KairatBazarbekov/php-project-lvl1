@@ -4,6 +4,7 @@ install:
 brain-games:
     .bin/brain-games
     .bin/brain-even
+    .bin/brain-calc
 
 validate:
     composer validate
