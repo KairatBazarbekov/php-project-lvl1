@@ -5,6 +5,7 @@ brain-games:
     .bin/brain-games
     .bin/brain-even
     .bin/brain-calc
+    .bin/brain-gcd
 
 validate:
     composer validate
