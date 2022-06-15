@@ -13,13 +13,13 @@ class Calc extends Engine
     {
         $this->welcome();
         $this->setname();
-
+        $randMandatory = array('*', '-', '+');
         line('What is the result of the expression?');
         for ($i = 0; $i < $this->getTryCount(); $i++) {
+            $numberOperation = rand(0, 2);
             $digit = rand(0, 100);
             $digit2 = rand(0, 100);
-            $randMandatory = array('*', '/', '-', '+');
-            $random = rand(0, 3);
+            $random = rand(0, 2);
             $rand = $randMandatory[$random];
             line("Question: $digit $rand $digit2");
             $answer = prompt('Your answer');
