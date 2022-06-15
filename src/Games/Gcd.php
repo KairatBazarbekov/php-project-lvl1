@@ -18,10 +18,21 @@ class Gcd extends Engine
         for ($i = 0; $i < $this->getTryCount(); $i++) {
             $digit = rand(0, 100);
             $digit2 = rand(0, 100);
-
+            $divisors1 = [];
+            $divisors2 = [];
+            for ($j = 1; $j <= $digit; $j++) {
+                if ($digit % $j == 0) {
+                    $divisors1[] = $j;
+                }
+            }
+            for ($k = 1; $k <= $digit2; $k++) {
+                if ($digit2 % $k == 0) {
+                    $divisors2[] = $k;
+                }
+            }
+            $correctAnswer = max(array_intersect($divisors1, $divisors2));
             line("Question: $digit $digit2");
             $answer = prompt('Your answer');
-            $correctAnswer = gmp_gcd($digit, $digit2);
             if ($answer == $correctAnswer) {
                 line('Correct!');
             } else {
