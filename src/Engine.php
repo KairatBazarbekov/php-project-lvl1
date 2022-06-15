@@ -32,11 +32,9 @@ class Engine
         line("Let's try again, $this->name!");
     }
 
-    public function getTryCount():int {
+    public function getTryCount() : int
+    {
         return $this->tryCount;
     }
 
-    public function setTryCount($tryCount) {
-        $this->tryCount = $tryCount;
-    }
 }
