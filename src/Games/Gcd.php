@@ -12,7 +12,7 @@ class Gcd extends Engine
     public function main(): bool
     {
         $this->welcome();
-        $this->setname();
+        $this->setName();
 
         line('What is the result of the expression?');
         for ($i = 0; $i < $this->getTryCount(); $i++) {

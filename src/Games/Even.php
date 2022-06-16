@@ -12,7 +12,7 @@ class Even extends Engine
     public function main(): bool
     {
         $this->welcome();
-        $this->setname();
+        $this->setName();
 
         line('Answer "yes" if the number is even, otherwise answer "no".');
         for ($i = 0; $i < $this->getTryCount(); $i++) {

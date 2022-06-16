@@ -12,7 +12,7 @@ class Calc extends Engine
     public function main(): bool
     {
         $this->welcome();
-        $this->setname();
+        $this->setName();
         $randMandatory = array('*', '-', '+');
         line('What is the result of the expression?');
         for ($i = 0; $i < $this->getTryCount(); $i++) {
