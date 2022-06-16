@@ -9,7 +9,7 @@ use function cli\prompt;
 
 class Even extends Engine
 {
-    function main(): bool
+    public function main(): bool
     {
         $this->welcome();
         $this->setname();

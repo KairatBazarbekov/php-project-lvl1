@@ -9,7 +9,7 @@ use function cli\prompt;
 
 class Prime extends Engine
 {
-    function inPrime($num): bool
+    public function inPrime($num): bool
     {
         for ($i = 2; $i < $num; $i++) {
             if ($num % $i == 0) {
@@ -19,8 +19,7 @@ class Prime extends Engine
         return true;
     }
 
-    function main(): bool
-
+    public function main(): bool
     {
         $this->welcome();
         $this->setname();
@@ -47,6 +46,5 @@ class Prime extends Engine
         $this->congratulations();
         return true;
     }
-
-
 }
+

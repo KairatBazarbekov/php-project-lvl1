@@ -8,8 +8,7 @@ use function cli\prompt;
 
 class Gcd extends Engine
 {
-    function main(): bool
-
+    public function main(): bool
     {
         $this->welcome();
         $this->setname();
@@ -44,5 +43,5 @@ class Gcd extends Engine
         $this->congratulations();
         return true;
     }
-
 }
+

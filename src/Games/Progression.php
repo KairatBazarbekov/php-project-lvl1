@@ -8,8 +8,7 @@ use function cli\prompt;
 
 class Progression extends Engine
 {
-    function main(): bool
-
+    public function main(): bool
     {
         $this->welcome();
         $this->setname();
@@ -48,3 +47,4 @@ class Progression extends Engine
         return true;
     }
 }
+

@@ -3,13 +3,13 @@
 namespace Hexlet\Code\Games;
 
 use Hexlet\Code\Engine;
+
 use function cli\line;
 use function cli\prompt;
 
 class Calc extends Engine
 {
-    function main(): bool
-
+    public function main(): bool
     {
         $this->welcome();
         $this->setname();
@@ -35,17 +35,16 @@ class Calc extends Engine
         return true;
     }
 
-    function calculate($num1, $num2, $symbol)
+    public function calculate($num1, $num2, $symbol)
     {
         switch ($symbol) {
             case '+':
                 return $num1 + $num2;
             case '-':
                 return $num1 - $num2;
-            case '*':
-                return $num1 * $num2;
             default:
-                return $num1 / $num2;
+                return $num1 * $num2;
         }
     }
 }
+
