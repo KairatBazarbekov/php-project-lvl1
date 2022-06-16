@@ -31,7 +31,7 @@ class Gcd extends Engine
                 }
             }
             $correctAnswer = max(array_intersect($divisors1, $divisors2));
-            line("Question: $digit $digit2");
+            line("Question: ".$digit." ".$digit2);
             $answer = prompt('Your answer');
             if ($answer == $correctAnswer) {
                 line('Correct!');
