@@ -1,6 +1,6 @@
 <?php
+namespace Src\Games\Calc;
 
-namespace Hexlet\Code\Games;
 
 use function cli\line;
 use function cli\prompt;
@@ -8,7 +8,7 @@ use function cli\prompt;
 function main(): bool
 {
     $randMandatory = array('*', '-', '+');
-    line('Welcome to the Brain Game!');
+    line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     line("Hello, $name!");
     line('What is the result of the expression?');
