@@ -1,6 +1,6 @@
 <?php
 
-namespace Hexlet\Code\Games;
+namespace Src\Games\Prime;
 
 use function cli\line;
 use function cli\prompt;
@@ -17,7 +17,7 @@ function inPrime(int $num): bool
 
 function main(): bool
 {
-    line('Welcome to the Brain Game!');
+    line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     line("Hello, $name!");
     line('Answer "yes" if the number is even, otherwise answer "no".');
