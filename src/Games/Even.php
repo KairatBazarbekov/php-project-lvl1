@@ -33,4 +33,3 @@ function main(): bool
     line("Congratulations, $name!");
     return true;
 }
-

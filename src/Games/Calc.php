@@ -1,6 +1,6 @@
 <?php
-namespace Src\Games\Calc;
 
+namespace Src\Games\Calc;
 
 use function cli\line;
 use function cli\prompt;
