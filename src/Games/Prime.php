@@ -26,7 +26,7 @@ class Prime extends Engine
 
         line('Answer "yes" if the number is even, otherwise answer "no".');
         for ($i = 0; $i < $this->getTryCount(); $i++) {
-            $digit = rand(0, 50);
+            $digit = rand(2, 50);
             line("Question: $digit");
 
             if ($this->inPrime($digit)) {
