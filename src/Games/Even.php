@@ -10,7 +10,6 @@ use function cli\prompt;
 class Even extends Engine
 {
     function main(): bool
-
     {
         $this->welcome();
         $this->setname();
@@ -31,7 +30,7 @@ class Even extends Engine
                 } else if ($digit % 2 != 0) {
                     $correctAnswer = 'no';
                 }
-                line("{$answer} is wrong answer ;(. Correct answer was {$correctAnswer}.");
+                line("($answer) is wrong answer ;(. Correct answer was ($correctAnswer).");
                 $this->gameOver();
                 return false;
             }

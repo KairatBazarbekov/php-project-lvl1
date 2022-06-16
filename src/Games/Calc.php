@@ -16,7 +16,6 @@ class Calc extends Engine
         $randMandatory = array('*', '-', '+');
         line('What is the result of the expression?');
         for ($i = 0; $i < $this->getTryCount(); $i++) {
-            $numberOperation = rand(0, 2);
             $digit = rand(0, 100);
             $digit2 = rand(0, 100);
             $random = rand(0, 2);
@@ -27,7 +26,7 @@ class Calc extends Engine
             if ($answer == $correctAnswer) {
                 line('Correct!');
             } else {
-                line("{$answer} is wrong answer ;(. Correct answer was {$correctAnswer}.");
+                line("($answer) is wrong answer ;(. Correct answer was ($correctAnswer).");
                 $this->gameOver();
                 return false;
             }

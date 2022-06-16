@@ -10,7 +10,6 @@ class Engine
     public string $name;
     private int $tryCount = 3;
 
-
     public function welcome()
     {
         line('Welcome to the Brain Games!');
@@ -32,9 +31,8 @@ class Engine
         line("Let's try again, $this->name!");
     }
 
-    public function getTryCount() : int
+    public function getTryCount(): int
     {
         return $this->tryCount;
     }
-
 }
