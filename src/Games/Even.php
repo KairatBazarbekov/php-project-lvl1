@@ -31,7 +31,7 @@ class Even extends Engine
                 } else if ($digit % 2 != 0) {
                     $correctAnswer = 'no';
                 }
-                line("$answer is wrong answer ;(. Correct answer was $correctAnswer.");
+                line("{$answer} is wrong answer ;(. Correct answer was {$correctAnswer}.");
                 $this->gameOver();
                 return false;
             }

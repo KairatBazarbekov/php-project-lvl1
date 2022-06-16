@@ -27,7 +27,7 @@ class Calc extends Engine
             if ($answer == $correctAnswer) {
                 line('Correct!');
             } else {
-                line("$answer is wrong answer ;(. Correct answer was $correctAnswer.");
+                line("{$answer} is wrong answer ;(. Correct answer was {$correctAnswer}.");
                 $this->gameOver();
                 return false;
             }
