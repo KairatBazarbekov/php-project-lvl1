@@ -16,8 +16,8 @@ class Gcd extends Engine
 
         line('What is the result of the expression?');
         for ($i = 0; $i < $this->getTryCount(); $i++) {
-            $digit = rand(0, 100);
-            $digit2 = rand(0, 100);
+            $digit = rand(1, 100);
+            $digit2 = rand(1, 100);
             $divisors1 = [];
             $divisors2 = [];
             for ($j = 1; $j <= $digit; $j++) {
