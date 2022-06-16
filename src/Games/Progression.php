@@ -2,48 +2,44 @@
 
 namespace Hexlet\Code\Games;
 
-use Hexlet\Code\Engine;
-
 use function cli\line;
 use function cli\prompt;
 
-class Progression extends Engine
+function main(): bool
 {
-    public function main(): bool
-    {
-        $this->welcome();
-        $this->setName();
-
-        line('What is the result of the expression?');
-        for ($i = 0; $i < $this->getTryCount(); $i++) {
-            $lengthProgression = rand(5, 10);
-            $positionMissing = rand(1, $lengthProgression);
-            $firstNumber = rand(0, 100);
-            $intervalProgression = rand(0, 10);
-            $j = 1;
-            echo 'Question: ';
-            while ($j != $lengthProgression + 1) {
-                if ($j == $positionMissing) {
-                    echo '..';
-                    $correctAnswer = $firstNumber;
-                } else {
-                    echo $firstNumber;
-                }
-                echo ' ';
-                $firstNumber += $intervalProgression;
-                $j++;
-            }
-            echo PHP_EOL;
-            $answer = prompt('Your answer');
-            if ($answer == $correctAnswer) {
-                line('Correct!');
+    line('Welcome to the Brain Game!');
+    $name = prompt('May I have your name?');
+    line("Hello, $name!");
+    line('What is the result of the expression?');
+    for ($i = 0; $i < 3; $i++) {
+        $lengthProgression = rand(5, 10);
+        $positionMissing = rand(1, $lengthProgression);
+        $firstNumber = rand(0, 100);
+        $intervalProgression = rand(0, 10);
+        $j = 1;
+        echo 'Question: ';
+        $correctAnswer = 0;
+        while ($j != $lengthProgression + 1) {
+            if ($j == $positionMissing) {
+                echo '..';
+                $correctAnswer = $firstNumber;
             } else {
-                line("($answer) is wrong answer ;(. Correct answer was ($correctAnswer).");
-                $this->gameOver();
-                return false;
+                echo $firstNumber;
             }
+            echo ' ';
+            $firstNumber += $intervalProgression;
+            $j++;
         }
-        $this->congratulations();
-        return true;
+        echo PHP_EOL;
+        $answer = prompt('Your answer');
+        if ($answer == $correctAnswer) {
+            line('Correct!');
+        } else {
+            line("($answer) is wrong answer ;(. Correct answer was ($correctAnswer).");
+            line("Let's try again, $name!");
+            return false;
+        }
     }
+    line("Congratulations, $name!");
+    return true;
 }
