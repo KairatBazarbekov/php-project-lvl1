@@ -47,4 +47,3 @@ class Prime extends Engine
         return true;
     }
 }
-

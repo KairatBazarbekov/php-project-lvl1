@@ -3,6 +3,7 @@
 namespace Hexlet\Code\Games;
 
 use Hexlet\Code\Engine;
+
 use function cli\line;
 use function cli\prompt;
 
@@ -41,10 +42,8 @@ class Progression extends Engine
                 $this->gameOver();
                 return false;
             }
-
         }
         $this->congratulations();
         return true;
     }
 }
-
