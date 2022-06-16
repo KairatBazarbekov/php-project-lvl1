@@ -31,12 +31,12 @@ class Gcd extends Engine
                 }
             }
             $correctAnswer = max(array_intersect($divisors1, $divisors2));
-            line("Question: ".$digit." ".$digit2);
+            line("Question: $digit $digit2");
             $answer = prompt('Your answer');
             if ($answer == $correctAnswer) {
                 line('Correct!');
             } else {
-                line("$answer is wrong answer ;(. Correct answer was $correctAnswer.");
+                line("'$answer' is wrong answer ;(. Correct answer was '$correctAnswer'.");
                 $this->gameOver();
                 return false;
             }
