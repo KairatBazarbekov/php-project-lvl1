@@ -1,13 +1,13 @@
 <?php
 
-namespace Hexlet\Code\Games;
+namespace Src\Games\Progression;
 
 use function cli\line;
 use function cli\prompt;
 
 function main(): bool
 {
-    line('Welcome to the Brain Game!');
+    line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     line("Hello, $name!");
     line('What is the result of the expression?');
